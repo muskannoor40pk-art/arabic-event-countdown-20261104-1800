@@ -1,0 +1,34 @@
+:root {
+            --primary: #0a2540;
+            --accent: #00d4ff;
+            --text: #333;
+            --white: #ffffff;
+            --gray: #f8f9fa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--gray); color: var(--text); line-height: 1.6; }
+
+        header { background: var(--primary); color: var(--white); padding: 4rem 1rem; text-align: center; }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+
+        .timer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 2rem 0; }
+        .timer-box { background: var(--white); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        .timer-val { display: block; font-size: 2.5rem; font-weight: bold; color: var(--primary); }
+        .timer-label { font-size: 0.9rem; color: #666; }
+
+        .section { background: var(--white); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        h2 { margin-bottom: 1.5rem; color: var(--primary); border-right: 4px solid var(--accent); padding-right: 1rem; }
+
+        .agenda-item { display: flex; align-items: center; padding: 1rem 0; border-bottom: 1px solid #eee; }
+        .time-badge { font-weight: bold; margin-left: 2rem; color: var(--accent); min-width: 80px; }
+
+        .subscribe-form { display: flex; gap: 1rem; margin-top: 1rem; }
+        input[type="email"] { flex: 1; padding: 0.8rem; border: 1px solid #ddd; border-radius: 6px; }
+        button { padding: 0.8rem 2rem; background: var(--primary); color: white; border: none; border-radius: 6px; cursor: pointer; transition: background 0.3s; }
+        button:hover { background: #1a4a7a; }
+
+        @media (max-width: 600px) {
+            .timer-grid { grid-template-columns: repeat(2, 1fr); }
+            .subscribe-form { flex-direction: column; }
+        }
